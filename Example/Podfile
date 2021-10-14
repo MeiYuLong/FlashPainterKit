@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'FlashPainterKit_Example' do
+  pod 'FlashPainterKit', :path => '../'
+
+  target 'FlashPainterKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

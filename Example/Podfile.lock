@@ -1,0 +1,16 @@
+PODS:
+  - FlashPainterKit (0.1.0)
+
+DEPENDENCIES:
+  - FlashPainterKit (from `../`)
+
+EXTERNAL SOURCES:
+  FlashPainterKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FlashPainterKit: b04b0a5987423c15af5137387449a445010cbd38
+
+PODFILE CHECKSUM: ad5bbb565103cb6ff3874cbfe9059ef2002fe70c
+
+COCOAPODS: 1.10.0
