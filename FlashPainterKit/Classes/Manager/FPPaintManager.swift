@@ -27,4 +27,27 @@ public class FPPaintManager {
     public static func drawPNOLabel(data: FPTicketLabelData, _ bottom: CGFloat = 10) -> UIImage {
         return FPPaint.shared.drawPNOLabel(data: data, bottom)
     }
+    
+    public static func checkImageSize(image: UIImage, type: EPPrinterType = .P2) -> UIImage {
+        let imageSize = image.size
+        let targetWidth = CGFloat(type.rawValue)
+        if imageSize.width < targetWidth {
+            let newImage = self.scaleToOriginSize(image: image, width: targetWidth) ?? image
+            return newImage
+        }
+        return image
+    }
+    
+    /// image size真是尺寸 = size * scale
+    private static func scaleToOriginSize(image: UIImage, width: CGFloat) -> UIImage? {
+        let orginSize = image.size
+        // 宽高要为整数，如果不为整数，可能出现一个没有色值的边线，抖动算法和二值化时，没有色值等于黑色
+        let newSize = CGSize(width: width, height: ceil(orginSize.height / orginSize.width * width))
+
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImg = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImg
+    }
 }
