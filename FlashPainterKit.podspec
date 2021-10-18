@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlashPainterKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Flash 绘制标签、绘制图片库.'
 
 # This description is used to generate tags and improve search results.

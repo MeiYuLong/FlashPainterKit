@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         data.dst_phone = "dst_phone北京朝阳区奥"
         data.dst_detail_address = "北京朝阳区奥运村街道北辰新纪元2-2402"
         data.remark = "北京朝阳区奥运村街道北辰新纪元北京朝阳区奥运村街道北辰新纪元"
-        let image = FPPaintManager.draw365Label(type: .p3, data: data)
+        let image = FPPaintManager.draw365Label(type: .P3, data: data)
         updateImage(image: image)
     }
     

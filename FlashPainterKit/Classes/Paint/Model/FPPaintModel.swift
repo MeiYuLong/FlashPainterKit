@@ -86,7 +86,7 @@ public class FPTicketLabelData: FPLabelBaseData {
 /// 打印机类型--对应尺寸（2寸、3寸）
 public enum EPPrinterType: Int {
     case P2 = 380
-    case p3 = 570
+    case P3 = 570
 }
 
 /// 地址信息枚举
